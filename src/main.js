@@ -37,9 +37,9 @@ let messages = [
     `),
 ];
 
-async function runAgentWithTools(prompt, maxIterations = 30) {
+async function runAgentWithTools(query, maxIterations = 30) {
 
-    messages.push(new HumanMessage(prompt))
+    messages.push(new HumanMessage(query))
 
     for (let i = 0; i < maxIterations; i++) {
         console.log(`⏳ 正在等待 AI 思考...`);
